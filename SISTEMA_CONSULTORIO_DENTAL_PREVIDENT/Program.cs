@@ -17,7 +17,6 @@ namespace SISTEMA_CONSULTORIO_DENTAL_PREVIDENT
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Vistas.Principal.Logueo());
-            //Application.Run(new Vistas.Principal.Menu_Odontologo());
         }
     }
 }
