@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D6E78E10-66B3-4CDD-A69C-4B8FCC405CB1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SISTEMA_CONSULTORIO_DENTAL_PREVIDENT</RootNamespace>
+    <AssemblyName>SISTEMA_CONSULTORIO_DENTAL_PREVIDENT</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>D:\DISCO D\BUNIFU\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Consulta.cs" />
+    <Compile Include="Clases\HistoriaClinica.cs" />
+    <Compile Include="Clases\IFunciones.cs" />
+    <Compile Include="Clases\Odontologo.cs" />
+    <Compile Include="Clases\Paciente.cs" />
+    <Compile Include="Clases\Pago.cs" />
+    <Compile Include="Clases\Servicios.cs" />
+    <Compile Include="Clases\Telefono.cs" />
+    <Compile Include="Clases\Turno.cs" />
+    <Compile Include="Clases\Ubigeo.cs" />
+    <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Clases\Usuariopwd.cs" />
+    <Compile Include="DataSetPacientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPacientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetUsuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetUsuarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Vistas\Formularios\Consultas\AgregarConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Consultas\AgregarConsulta.Designer.cs">
+      <DependentUpon>AgregarConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Consultas\ListarConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Consultas\ListarConsulta.Designer.cs">
+      <DependentUpon>ListarConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Formularios\HIstoriaClinica\Pacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\HIstoriaClinica\Pacientes.Designer.cs">
+      <DependentUpon>Pacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Formularios\M_Pagos\Listar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\M_Pagos\Listar.Designer.cs">
+      <DependentUpon>Listar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Odontologos\FormActualizarOdontologos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Odontologos\FormActualizarOdontologos.Designer.cs">
+      <DependentUpon>FormActualizarOdontologos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Odontologos\FormListarOdontologos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Odontologos\FormListarOdontologos.Designer.cs">
+      <DependentUpon>FormListarOdontologos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Odontologos\FormRegistrarOdontologos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Odontologos\FormRegistrarOdontologos.Designer.cs">
+      <DependentUpon>FormRegistrarOdontologos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Reportes\ReporteUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Reportes\ReporteUsuarios.Designer.cs">
+      <DependentUpon>ReporteUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Reportes\Reporte_Pacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Reportes\Reporte_Pacientes.Designer.cs">
+      <DependentUpon>Reporte_Pacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Turnos\FormActualizarTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Turnos\FormActualizarTurnos.Designer.cs">
+      <DependentUpon>FormActualizarTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Turnos\FormListarTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Turnos\FormListarTurnos.Designer.cs">
+      <DependentUpon>FormListarTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Turnos\FormRegistrarTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Turnos\FormRegistrarTurnos.Designer.cs">
+      <DependentUpon>FormRegistrarTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Usuarios\Mantener_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Usuarios\Mantener_Usuarios.Designer.cs">
+      <DependentUpon>Mantener_Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Formularios\M_Pagos\Agregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\M_Pagos\Agregar.Designer.cs">
+      <DependentUpon>Agregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Pacientes\FormActualizarPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Pacientes\FormActualizarPacientes.Designer.cs">
+      <DependentUpon>FormActualizarPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Pacientes\FormListarPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Pacientes\FormListarPacientes.Designer.cs">
+      <DependentUpon>FormListarPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Pacientes\FormRegistrarPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Formularios\Pacientes\FormRegistrarPacientes.Designer.cs">
+      <DependentUpon>FormRegistrarPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Principal\Form_Bienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Principal\Form_Bienvenida.Designer.cs">
+      <DependentUpon>Form_Bienvenida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Principal\Logueo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Principal\Logueo.Designer.cs">
+      <DependentUpon>Logueo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Principal\Menu_Admisionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Principal\Menu_Admisionista.Designer.cs">
+      <DependentUpon>Menu_Admisionista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Principal\Menu_Odontologo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Principal\Menu_Odontologo.Designer.cs">
+      <DependentUpon>Menu_Odontologo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Principal\Menu_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Principal\Menu_Principal.Designer.cs">
+      <DependentUpon>Menu_Principal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vistas\Formularios\Consultas\AgregarConsulta.resx">
+      <DependentUpon>AgregarConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Formularios\Consultas\ListarConsulta.resx">
+      <DependentUpon>ListarConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Formularios\HIstoriaClinica\Pacientes.resx">
+      <DependentUpon>Pacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Formularios\M_Pagos\Listar.resx">
+      <DependentUpon>Listar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Formularios\Odontologos\FormActualizarOdontologos.resx">
+      <DependentUpon>FormActualizarOdontologos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Formularios\Odontologos\FormListarOdontologos.resx">
+      <DependentUpon>FormListarOdontologos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Formularios\Odontologos\FormRegistrarOdontologos.resx">
+      <DependentUpon>FormRegistrarOdontologos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Formularios\Reportes\ReporteUsuarios.resx">
+      <DependentUpon>ReporteUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Formularios\Reportes\Reporte_Pacientes.resx">
+      <DependentUpon>Reporte_Pacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Formularios\Reportes\ReportPaciente.rdlc" />
+    <EmbeddedResource Include="Vistas\Formularios\Reportes\ReportUsuarios.rdlc" />
+    <EmbeddedResource Include="Vistas\Formularios\Turnos\FormActualizarTurnos.resx">
+      <DependentUpon>FormActualizarTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Formularios\Turnos\FormListarTurnos.resx">
+      <DependentUpon>FormListarTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Formularios\Turnos\FormRegistrarTurnos.resx">
+      <DependentUpon>FormRegistrarTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Formularios\Usuarios\Mantener_Usuarios.resx">
+      <DependentUpon>Mantener_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Formularios\M_Pagos\Agregar.resx">
+      <DependentUpon>Agregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Formularios\Pacientes\FormActualizarPacientes.resx">
+      <DependentUpon>FormActualizarPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Formularios\Pacientes\FormListarPacientes.resx">
+      <DependentUpon>FormListarPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Formularios\Pacientes\FormRegistrarPacientes.resx">
+      <DependentUpon>FormRegistrarPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Principal\Form_Bienvenida.resx">
+      <DependentUpon>Form_Bienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Principal\Logueo.resx">
+      <DependentUpon>Logueo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Principal\Menu_Admisionista.resx">
+      <DependentUpon>Menu_Admisionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Principal\Menu_Odontologo.resx">
+      <DependentUpon>Menu_Odontologo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Principal\Menu_Principal.resx">
+      <DependentUpon>Menu_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSetPacientes.xsc">
+      <DependentUpon>DataSetPacientes.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPacientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPacientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPacientes.xss">
+      <DependentUpon>DataSetPacientes.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetUsuarios.xsc">
+      <DependentUpon>DataSetUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetUsuarios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetUsuarios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetUsuarios.xss">
+      <DependentUpon>DataSetUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multi-tab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asociación-de-Higienistas-Bucodentales-de-Cantabria4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\480px-Facebook_f_logo_%282019%29.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\580b57fcd9996e24bc43c543.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\580b57fcd9996e24bc43c521.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-box-empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paciente %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carpeta-de-historial-clinico-con-signo-mas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medico_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingresos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-for-incidents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-button-with-users-inside.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-group1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaf-monstera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-cabecera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\familia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34707a7c93a24a43378a56da9af1b39c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\escritura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portrait-of-hansome-young-male-doctor-man.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
